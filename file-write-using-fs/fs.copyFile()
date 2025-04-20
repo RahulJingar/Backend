@@ -1,3 +1,4 @@
+1.
 const fs = require('fs');
 
 fs.copyFile("hello.txt", "./copy/pradhan.txt", function(err) {
@@ -10,3 +11,24 @@ fs.copyFile("hello.txt", "./copy/pradhan.txt", function(err) {
 
 
 //done
+
+
+
+
+
+2.
+const fs = require('fs');
+
+fs.copyFile("hello.txt", "./copy2/pradhan.txt", function(err) {
+    if (err) {
+        console.log("Error while copying:", err);
+    } else {
+        console.log("done");
+    }
+});
+
+
+//Error while copying: Error: ENOENT: no such file or
+directory, copyfile 'C:\Users\rahul\Desktop\Backend\hello.txt' ->
+'C:\Users\rahul\Desktop\Backend\copy2\pradhan.txt' {errno: -4058, code: 'ENOENT', syscall: 'copyfile',
+path: 'C:\\Users\\rahul\\Desktop\\Backend\\hello.txt', dest: 'C:\\Users\\rahul\\Desktop\\Backend\\copy2\\pradhan.txt', …}
