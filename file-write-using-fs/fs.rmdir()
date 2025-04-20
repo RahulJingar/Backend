@@ -4,9 +4,9 @@ fs.rmdir("./copy", { recursive: true }, function(err) {
     if (err) {
         console.log(err); 
     } else {
-        console.log("done"); 
+        console.log("removed"); 
     }
 });
 
 
-//Output:- done and delete the copy folder
+//Output:- removed and delete the copy folder
