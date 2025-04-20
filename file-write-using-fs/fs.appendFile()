@@ -1,0 +1,15 @@
+const fs = require('fs');
+
+const content = `Hey, hello! Kaise ho?
+Umeed hai sab badhiya chal raha hoga. 😄`;
+
+fs.appendFile("hey.txt", content, function(err) {
+    if (err) {
+        console.error("Error writing file:", err);
+    } else {
+        console.log("done");
+    }
+});
+
+
+//Output:- done
