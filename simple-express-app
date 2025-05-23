@@ -1,0 +1,11 @@
+const express = require('express');
+const app = express();
+
+app.get("/", function(req,res){
+    res.send("hello world!!")
+})
+
+app.get("/duniya", function(req,res){
+    res.send("hello duniya walo")
+})
+app.listen(2750);
