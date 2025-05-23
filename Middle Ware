@@ -1,0 +1,25 @@
+const express = require('express');
+const app = express();
+
+app.get("/", function(req,res){
+    res.send("that is ok!!")
+})
+
+app.use(function(req,res,next){
+    console.log("middle ware is here")
+    next()
+})
+
+app.use(function(req,res,next){
+    console.log("middle ware is here")
+    next()
+})
+
+app.get("/profile",function(req,res){
+    res.send("middle chala hain")
+})
+
+app.get("/profile",function(req,res){
+    res.send("middle chala hain ek or baar")
+})
+app.listen(2000)
