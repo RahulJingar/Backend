@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejs</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    
+    <div class="w-full h-screen bg-zinc-900 p-10 text-white">
+       <div class="mb-10">
+            <a class="text-blue-500 " href="/read">Read Users</a>
+       </div>
+
+            <h1 class="text-3xl tracking-tighter mb-3">Update User</h1>
+
+        <form action="/update/<%= users._id %>" method="post">
+            <input 
+            type="text"
+            class="px-5 py-2 bg-transparent border border-zinc-800 outline-none rounded-xl"
+            placeholder="name"
+            name="name"
+            value="<%= users.name %>"
+            >
+            <br>
+            <br>
+
+
+
+            <input 
+            type="email"
+            class="px-5 py-2 bg-transparent border border-zinc-800 outline-none rounded-xl"
+            placeholder="email"
+            name="email"
+            value="<%= users.email %>"
+
+            >
+            <br>
+            <br>
+
+
+
+               <input 
+            type="text"
+            class="px-5 py-2 bg-transparent border border-zinc-800 outline-none rounded-xl"
+            placeholder="image Url"
+            name="image"
+            value="<%= users.image %>"
+            >
+            <br>
+            <br>
+
+            <button class="bg-yellow-500 hover:bg-yellow-900 text-black w-40 rounded-md px-5 py-2 ml-3">Update User</button>
+        </form>
+   </div>
+</body>
+</html>
